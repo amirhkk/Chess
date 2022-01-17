@@ -109,7 +109,7 @@ public class Player {
         // note that its not possible for the move to already have the value of King, due to the
         // rules of check.
         if (computeInCheck(board.opponent(this))) {
-          move.moveValue += Piece.KING_VALUE;
+          move.moveValue += King.KING_VALUE;
         }
 
         // add move to moves tree
@@ -202,7 +202,7 @@ public class Player {
       for (Position position : piece.validNextPositions()) {
 
         if (board.positionOccupied(position)) {
-          if (board.atPosition(position).value() == Piece.KING_VALUE) {
+          if (board.atPosition(position).value() == King.KING_VALUE) {
             // opponents piece can move to this players king, this players king is in check!
             return true;
           }
