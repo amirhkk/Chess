@@ -56,19 +56,19 @@ public abstract class Piece {
 
   abstract int value();
 
-  public Position position() {
+  protected Position position() {
     return position;
   }
 
-  public char name() {
+  protected char name() {
     return name;
   }
 
-  public void moveTo(Position newPosition) {
+  protected void moveTo(Position newPosition) {
     position = newPosition;
   }
 
-  public PieceColor colour() {
+  protected PieceColor colour() {
     return pieceColor;
   }
 
@@ -76,7 +76,7 @@ public abstract class Piece {
     return name() + " " + position.toString();
   }
 
-  public Board board() {
+  protected Board board() {
     return board;
   }
 }
