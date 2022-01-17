@@ -31,4 +31,9 @@ public class Rook extends Piece{
     int value() {
         return 5;
     }
+
+    @Override
+    char name() {
+        return 'R';
+    }
 }

@@ -32,4 +32,9 @@ public class King extends Piece{
     int value() {
         return KING_VALUE;
     }
+
+    @Override
+    char name() {
+        return 'K';
+    }
 }

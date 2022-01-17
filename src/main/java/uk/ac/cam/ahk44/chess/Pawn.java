@@ -37,6 +37,11 @@ public class Pawn extends Piece{
         return 1;
     }
 
+    @Override
+    char name() {
+        return 'P';
+    }
+
     public void computePawnNextPositions(List<Position> nextPositions) {
         // The En passant move is not included.
         // The Promotion is not included.

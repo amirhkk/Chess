@@ -31,4 +31,9 @@ public class Bishop extends Piece {
     int value() {
         return 3;
     }
+
+    @Override
+    char name() {
+        return 'B';
+    }
 }

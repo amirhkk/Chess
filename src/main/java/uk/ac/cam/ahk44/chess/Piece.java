@@ -60,9 +60,7 @@ public abstract class Piece {
     return position;
   }
 
-  protected char name() {
-    return name;
-  }
+  abstract char name();
 
   protected void moveTo(Position newPosition) {
     position = newPosition;

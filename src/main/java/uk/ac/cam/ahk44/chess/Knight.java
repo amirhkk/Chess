@@ -32,6 +32,11 @@ public class Knight extends Piece{
         return 3;
     }
 
+    @Override
+    char name() {
+        return 'N';
+    }
+
     public void computeKnightNextPositions(List<Position> nextPositions) {
         // directions a knight can travel in.
         final int[][] nextPosDeltas =

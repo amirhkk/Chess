@@ -32,4 +32,9 @@ public class Queen extends Piece{
     int value() {
         return 10;
     }
+
+    @Override
+    char name() {
+        return 'Q';
+    }
 }
