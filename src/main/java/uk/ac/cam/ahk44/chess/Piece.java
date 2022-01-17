@@ -26,7 +26,7 @@ import java.util.List;
 
 public abstract class Piece {
 
-  protected static int KING_VALUE = 10000;
+  static int KING_VALUE = 10000;
 
   protected Position position;
   protected PieceColor pieceColor;
