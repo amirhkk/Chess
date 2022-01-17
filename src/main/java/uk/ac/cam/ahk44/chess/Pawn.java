@@ -9,9 +9,9 @@ import static uk.ac.cam.ahk44.chess.Position.Rank.SEVEN;
 import static uk.ac.cam.ahk44.chess.Position.Rank.TWO;
 
 @Component
-public class P extends Piece{
+public class Pawn extends Piece{
 
-    public P(char name, Position piecePosition, PieceColor pieceColor, Board board) {
+    public Pawn(char name, Position piecePosition, PieceColor pieceColor, Board board) {
         super(name, piecePosition, pieceColor, board);
         this.name = name;
         this.position = piecePosition;

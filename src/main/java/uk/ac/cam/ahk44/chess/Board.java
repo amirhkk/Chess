@@ -61,10 +61,10 @@ public class Board {
     // setup pawns
     for (File file : File.values()) {
       Position positionBlack = getPosAt(Rank.SEVEN, file);
-      piecesMap.put(positionBlack, (Piece) new P('P', positionBlack, PieceColor.BLACK, this));
+      piecesMap.put(positionBlack, (Piece) new Pawn('P', positionBlack, PieceColor.BLACK, this));
 
       Position positionWhite = getPosAt(Rank.TWO, file);
-      piecesMap.put(positionWhite, new P('P', positionWhite, PieceColor.WHITE, this));
+      piecesMap.put(positionWhite, new Pawn('P', positionWhite, PieceColor.WHITE, this));
     }
   }
 
@@ -75,13 +75,13 @@ public class Board {
     Position positionRookWhiteLeft = getPosAt(Rank.ONE, File.A);
     Position positionRookWhiteRight = getPosAt(Rank.ONE, File.H);
     piecesMap.put(
-        positionRookBlackLeft, new R('R', positionRookBlackLeft, PieceColor.BLACK, this));
+        positionRookBlackLeft, new Rook('R', positionRookBlackLeft, PieceColor.BLACK, this));
     piecesMap.put(
-        positionRookBlackRight, new R('R', positionRookBlackRight, PieceColor.BLACK, this));
+        positionRookBlackRight, new Rook('R', positionRookBlackRight, PieceColor.BLACK, this));
     piecesMap.put(
-        positionRookWhiteLeft, new R('R', positionRookWhiteLeft, PieceColor.WHITE, this));
+        positionRookWhiteLeft, new Rook('R', positionRookWhiteLeft, PieceColor.WHITE, this));
     piecesMap.put(
-        positionRookWhiteRight, new R('R', positionRookWhiteRight, PieceColor.WHITE, this));
+        positionRookWhiteRight, new Rook('R', positionRookWhiteRight, PieceColor.WHITE, this));
   }
 
   private void setupKnights() {
@@ -91,13 +91,13 @@ public class Board {
     Position positionKnightWhiteLeft = getPosAt(Rank.ONE, File.B);
     Position positionKnightWhiteRight = getPosAt(Rank.ONE, File.G);
     piecesMap.put(
-        positionKnightBlackLeft, new N('N', positionKnightBlackLeft, PieceColor.BLACK, this));
+        positionKnightBlackLeft, new Knight('N', positionKnightBlackLeft, PieceColor.BLACK, this));
     piecesMap.put(
-        positionKnightBlackRight, new N('N', positionKnightBlackRight, PieceColor.BLACK, this));
+        positionKnightBlackRight, new Knight('N', positionKnightBlackRight, PieceColor.BLACK, this));
     piecesMap.put(
-        positionKnightWhiteLeft, new N('N', positionKnightWhiteLeft, PieceColor.WHITE, this));
+        positionKnightWhiteLeft, new Knight('N', positionKnightWhiteLeft, PieceColor.WHITE, this));
     piecesMap.put(
-        positionKnightWhiteRight, new N('N', positionKnightWhiteRight, PieceColor.WHITE, this));
+        positionKnightWhiteRight, new Knight('N', positionKnightWhiteRight, PieceColor.WHITE, this));
   }
 
   private void setupBishops() {
@@ -107,27 +107,27 @@ public class Board {
     Position positionBishopWhiteLeft = getPosAt(Rank.ONE, File.C);
     Position positionBishopWhiteRight = getPosAt(Rank.ONE, File.F);
     piecesMap.put(
-        positionBishopBlackLeft, new B('B', positionBishopBlackLeft, PieceColor.BLACK, this));
+        positionBishopBlackLeft, new Bishop('B', positionBishopBlackLeft, PieceColor.BLACK, this));
     piecesMap.put(
-        positionBishopBlackRight, new B('B', positionBishopBlackRight, PieceColor.BLACK, this));
+        positionBishopBlackRight, new Bishop('B', positionBishopBlackRight, PieceColor.BLACK, this));
     piecesMap.put(
-        positionBishopWhiteLeft, new B('B', positionBishopWhiteLeft, PieceColor.WHITE, this));
+        positionBishopWhiteLeft, new Bishop('B', positionBishopWhiteLeft, PieceColor.WHITE, this));
     piecesMap.put(
-        positionBishopWhiteRight, new B('B', positionBishopWhiteRight, PieceColor.WHITE, this));
+        positionBishopWhiteRight, new Bishop('B', positionBishopWhiteRight, PieceColor.WHITE, this));
   }
 
   private void setupQueensAndKings() {
     // setup queen
     Position positionQueenBlack = getPosAt(Rank.EIGHT, File.D);
     Position positionQueenWhite = getPosAt(Rank.ONE, File.D);
-    piecesMap.put(positionQueenBlack, new Q('Q', positionQueenBlack, PieceColor.BLACK, this));
-    piecesMap.put(positionQueenWhite, new Q('Q', positionQueenWhite, PieceColor.WHITE, this));
+    piecesMap.put(positionQueenBlack, new Queen('Q', positionQueenBlack, PieceColor.BLACK, this));
+    piecesMap.put(positionQueenWhite, new Queen('Q', positionQueenWhite, PieceColor.WHITE, this));
 
     // setup king
     Position positionKingBlack = getPosAt(Rank.EIGHT, File.E);
     Position positionKingWhite = getPosAt(Rank.ONE, File.E);
-    piecesMap.put(positionKingBlack, new K('K', positionKingBlack, PieceColor.BLACK, this));
-    piecesMap.put(positionKingWhite, new K('K', positionKingWhite, PieceColor.WHITE, this));
+    piecesMap.put(positionKingBlack, new King('K', positionKingBlack, PieceColor.BLACK, this));
+    piecesMap.put(positionKingWhite, new King('K', positionKingWhite, PieceColor.WHITE, this));
   }
 
   /*

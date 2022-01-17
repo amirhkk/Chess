@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class R extends Piece{
+public class Rook extends Piece{
 
-    public R(char name, Position piecePosition, PieceColor pieceColor, Board board) {
+    public Rook(char name, Position piecePosition, PieceColor pieceColor, Board board) {
         super(name, piecePosition, pieceColor, board);
         this.name = name;
         this.position = piecePosition;

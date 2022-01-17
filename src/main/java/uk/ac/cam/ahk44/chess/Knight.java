@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class N extends Piece{
+public class Knight extends Piece{
 
-    public N(char name, Position piecePosition, PieceColor pieceColor, Board board) {
+    public Knight(char name, Position piecePosition, PieceColor pieceColor, Board board) {
         super(name, piecePosition, pieceColor, board);
         this.name = name;
         this.position = piecePosition;

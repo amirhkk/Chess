@@ -3,10 +3,10 @@ package uk.ac.cam.ahk44.chess;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class K extends Piece{
+public class Bishop extends Piece {
 
-    public K(char name, Position piecePosition, PieceColor pieceColor, Board board) {
+
+    public Bishop(char name, Position piecePosition, PieceColor pieceColor, Board board) {
         super(name, piecePosition, pieceColor, board);
         this.name = name;
         this.position = piecePosition;
@@ -17,19 +17,18 @@ public class K extends Piece{
     @Override
     List<Position> validNextPositions(){
         List<Position> nextPositions = new ArrayList<>();
-        position.getAllDiagonalMoves(1, board(), nextPositions);
-        position.getAllStraightMoves(1, board(), nextPositions);
+        position.getAllDiagonalMoves(8, board(), nextPositions);
         return nextPositions;
     }
 
     @Override
     char icon() {
         boolean colourSwitch = pieceColor == PieceColor.BLACK;
-        return colourSwitch ? '♚' : '♔';
+        return colourSwitch ? '♝' : '♗';
     }
 
     @Override
     int value() {
-        return KING_VALUE;
+        return 3;
     }
 }
