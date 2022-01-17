@@ -171,14 +171,17 @@ public class Position {
     }
   }
 
-  public void addPosAtDelta(
-      int deltaRank, int deltaFile, Board board, List<Position> positionList) {
+  public void addPosAtDelta(int deltaRank, int deltaFile, Board board, List<Position> positionList) {
     Position newPos = getPosAtDelta(deltaRank, deltaFile);
     if (newPos == null) return;
 
-    if (!board.positionOccupied(newPos)) positionList.add(newPos);
-    else if (board.atPosition(newPos).colour() != board.atPosition(this).colour())
+    if (!board.positionOccupied(newPos)){
       positionList.add(newPos);
+    }
+
+    else if (board.positionOccupied(this)){
+      if(board.atPosition(newPos).colour() != board.atPosition(this).colour()) positionList.add(newPos);
+    }
   }
 
   public void getAllDiagonalMoves(int maxDistance, Board board, List<Position> positionList) {
@@ -219,7 +222,7 @@ public class Position {
       Position nextPos = getPosAtDelta(step * rankDelta, step * fileDelta);
       if (nextPos == null) break;
 
-      if (board.positionOccupied(nextPos)) {
+      if (board.positionOccupied(nextPos) && board.positionOccupied(this)) {
         board.atPosition(this).name();
         if (board.atPosition(nextPos).colour() != board.atPosition(this).colour()) {
           positionList.add(nextPos);
