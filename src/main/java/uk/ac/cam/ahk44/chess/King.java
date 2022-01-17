@@ -6,7 +6,7 @@ import java.util.List;
 @Component
 public class King extends Piece{
 
-    protected static int KING_VALUE = 10000;
+    public static int KING_VALUE = 10000;
 
     public King(char name, Position piecePosition, PieceColor pieceColor, Board board) {
         super(name, piecePosition, pieceColor, board);
